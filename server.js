@@ -22,6 +22,10 @@ const db = mysql.createConnection(
     console.log('Connected to the election database.')
 );
 
+db.query(`SELECT * FROM candidates`, (err, rows) => {
+    console.log(rows);
+});
+
 //test to confirm connection to Express.ks server
 // app.get('/', (req, res) => {
 //     res.json({
